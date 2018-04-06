@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../rollup-umd/internals/declination/01-react" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../rollup-umd/internals/declination/06-bs-redux-saga" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../rollup-umd/internals/declination/12-redux-intl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../rollup-umd/internals/declination/14-bs-redux-saga-intl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../rollup-umd/internals/declination/15-bs-redux-immutable-intl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../rollup-umd/internals/declination/16-bs-redux-saga-immutable-intl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../rollup-umd/internals/declination/17-bs-redux-router-dom-intl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../rollup-umd/internals/declination/18-bs-redux-saga-immutable-router-dom-intl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../rollup-umd/internals/declination/19-bs-redux-saga-router-dom-intl" charset="UTF-8" />
+  </component>
+</project>
