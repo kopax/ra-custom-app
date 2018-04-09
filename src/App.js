@@ -1,15 +1,13 @@
 // in src/App.js
 import React from 'react';
-import { render } from 'react-dom';
 
 // redux, react-router, redux-form, saga, and material-ui
 // form the 'kernel' on which react-admin runs
-import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createHashHistory';
 import { Switch, Route } from 'react-router-dom';
-import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
-import { reducer as formReducer } from 'redux-form';
+import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import { MuiThemeProvider } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
