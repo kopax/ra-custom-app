@@ -15,6 +15,7 @@ import { MuiThemeProvider } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
+import createMuiTheme from 'material-ui/styles/createMuiTheme';
 
 // prebuilt react-admin features
 import {
@@ -50,7 +51,16 @@ const App = () => (
     <Provider store={store}>
       <TranslationProvider>
         <ConnectedRouter history={history}>
-          <MuiThemeProvider>
+          <MuiThemeProvider theme={createMuiTheme({
+            palette: {
+              secondary: {
+                light: '#6ec6ff',
+                main: '#2196f3',
+                dark: '#0069c0',
+                contrastText: '#fff',
+              },
+            },
+          })}>
             <AppBar position="static" color="default">
               <Toolbar>
                 <Typography variant="title" color="inherit">
@@ -60,14 +70,14 @@ const App = () => (
             </AppBar>
             <Switch>
               <Route exact path="/" component={Dashboard} />
-              <Route exact path="/posts" hasCreate render={(routeProps) => <PostList resource="posts" {...routeProps} />} />
+              <Route exact path="/posts" render={(routeProps) => <PostList hasEdit hasCreate hasList hasShow resource="posts" {...routeProps} />} />
               <Route exact path="/posts/create" render={(routeProps) => <PostCreate resource="posts" {...routeProps} />} />
-              <Route exact path="/posts/:id" hasShow render={(routeProps) => <PostEdit resource="posts" {...routeProps} />} />
-              <Route exact path="/posts/:id/show" hasEdit render={(routeProps) => <PostShow resource="posts" {...routeProps} />} />
-              <Route exact path="/comments" hasCreate render={(routeProps) => <CommentList resource="comments" {...routeProps} />} />
+              <Route exact path="/posts/:id" render={(routeProps) => <PostEdit hasShow resource="posts" {...routeProps} />} />
+              <Route exact path="/posts/:id/show" render={(routeProps) => <PostShow hasEdit resource="posts" {...routeProps} />} />
+              <Route exact path="/comments" render={(routeProps) => <CommentList hasEdit hasCreate hasList hasShow resource="comments" {...routeProps} />} />
               <Route exact path="/comments/create" render={(routeProps) => <CommentCreate resource="comments" {...routeProps} />} />
               <Route exact path="/comments/:id" render={(routeProps) => <CommentEdit resource="comments" {...routeProps} />} />
-              <Route exact path="/users" hasCreate render={(routeProps) => <UserList resource="users" {...routeProps} />} />
+              <Route exact path="/users" render={(routeProps) => <UserList hasEdit hasCreate hasList hasShow resource="users" {...routeProps} />} />
               <Route exact path="/users/create" render={(routeProps) => <UserCreate resource="users" {...routeProps} />} />
               <Route exact path="/users/:id" render={(routeProps) => <UserEdit resource="users" {...routeProps} />} />
             </Switch>
